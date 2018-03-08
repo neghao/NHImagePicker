@@ -165,7 +165,8 @@
 				28445203205142510070B2B6 /* NHAsseetsInfo.h */,
 				28445204205142510070B2B6 /* NHAsseetsInfo.m */,
 			);
-			path = NHImagePicker;
+			name = NHImagePicker;
+			path = ../NHImagePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
