@@ -37,11 +37,13 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Attention" message:@"Please give this app permission to access your photo library in your settings app!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
         
-    } else if (status == ALAuthorizationStatusNotDetermined) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Attention" message:@"Please settings app!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [alert show];
-        
-    } else {
+    }
+//    else if (status == ALAuthorizationStatusNotDetermined) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Attention" message:@"Please settings app!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+//        [alert show];
+//        
+//    }
+    else {
         _assetsLibrary = [[ALAssetsLibrary alloc] init];
         __weak typeof(self) weakself = self;
         [_assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
