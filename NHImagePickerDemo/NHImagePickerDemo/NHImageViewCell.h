@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NHImageViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) UIImage *image;
 
 @end

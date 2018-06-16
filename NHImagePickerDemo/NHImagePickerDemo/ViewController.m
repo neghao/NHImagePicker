@@ -10,6 +10,8 @@
 #import "NHImagePicker.h"
 #import "NHImageViewCell.h"
 
+
+
 @interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -26,6 +28,7 @@
     [super viewDidLoad];
     _imagePicker = [[NHImagePicker alloc] initWithPresentingController:self];
 
+    
     [_collectionView registerNib:[UINib nibWithNibName:@"NHImageViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     
 }
@@ -51,11 +54,7 @@
     
     UIImage *image = [_assetsDataArray objectAtIndex:indexPath.item].originalImage;
 
-    cell.scrollView.contentSize = CGSizeMake(image.size.width/2, image.size.height/2);;
-
-    [cell.imageView setImage:image];
-
-    
+    [cell setImage:image];
     
     return cell;
 }
@@ -66,8 +65,8 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UIImage *image = [_assetsDataArray objectAtIndex:indexPath.item].originalImage;
-    return CGSizeMake(image.size.width/2, image.size.height/2);
+    
+    return CGSizeMake(collectionView.bounds.size.width, collectionView.bounds.size.height-64);
 }
 
 @end

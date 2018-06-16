@@ -67,8 +67,10 @@
                 NHAsseetsInfo *info = [[NHAsseetsInfo alloc] init];
                 info.thumbnail = thumbnailImage;
                 info.originalImage = originalImage;
+//                info.originalImage = [UIImage imageNamed:@"timg.jpeg"];
+
                 info.isSelected = NO;
-                info.imageURLString = [[representation url] absoluteURL];
+                info.imageURLString = [[representation url] absoluteString];
                 
                 [weakself.assetsDataArray addObject:info];
                 

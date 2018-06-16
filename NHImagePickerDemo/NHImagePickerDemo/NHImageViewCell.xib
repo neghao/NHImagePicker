@@ -18,22 +18,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="240" height="156"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmA-j5-KyB">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmA-j5-KyB" customClass="NHPhotoBrowserScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="156"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Xr-SW-6KS">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="156"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Xr-SW-6KS" firstAttribute="leading" secondItem="mmA-j5-KyB" secondAttribute="leading" id="BeC-lc-tf9"/>
-                            <constraint firstItem="6Xr-SW-6KS" firstAttribute="centerX" secondItem="mmA-j5-KyB" secondAttribute="centerX" id="HXy-Jp-uTx"/>
-                            <constraint firstAttribute="trailing" secondItem="6Xr-SW-6KS" secondAttribute="trailing" id="Ttn-B2-mqd"/>
-                            <constraint firstAttribute="bottom" secondItem="6Xr-SW-6KS" secondAttribute="bottom" id="b9b-Aa-Gb2"/>
-                            <constraint firstItem="6Xr-SW-6KS" firstAttribute="centerY" secondItem="mmA-j5-KyB" secondAttribute="centerY" id="eLS-mS-Vdj"/>
-                            <constraint firstItem="6Xr-SW-6KS" firstAttribute="top" secondItem="mmA-j5-KyB" secondAttribute="top" id="oyh-v0-dps"/>
-                        </constraints>
                     </scrollView>
                 </subviews>
             </view>
@@ -47,7 +34,6 @@
             </constraints>
             <size key="customSize" width="240" height="156"/>
             <connections>
-                <outlet property="imageView" destination="6Xr-SW-6KS" id="5fl-uW-sc1"/>
                 <outlet property="scrollView" destination="mmA-j5-KyB" id="ol4-By-rxs"/>
             </connections>
             <point key="canvasLocation" x="129" y="107"/>
